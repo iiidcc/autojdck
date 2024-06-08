@@ -2,6 +2,7 @@
 '''
 
 项目地址：https://github.com/dsmggm/svjdck/
+原作者好像删库了
 
 脚本说明：
 1、脚本用于使用账号密码自动登录京东获取ck，自动更新ck到青龙
@@ -106,15 +107,15 @@ async def init_web_display():                           #初始化浏览器显�
 
 async def init_chrome():        #判断chrome是否存在，不存在则下载，仅针对windows
     if platform.system() == 'Windows':
-        chrome_dir = os.path.join(os.environ['USERPROFILE'], 'AppData', 'Local', 'pyppeteer', 'pyppeteer', 'local-chromium', '588429', 'chrome-win32')
+        chrome_dir = os.path.join(os.environ['USERPROFILE'], 'AppData', 'Local', 'pyppeteer', 'pyppeteer', 'local-chromium', '588429', 'chrome-win64')
         chrome_exe = os.path.join(chrome_dir, 'chrome.exe')
-        chmod_dir = os.path.join(os.environ['USERPROFILE'], 'AppData', 'Local', 'pyppeteer', 'pyppeteer', 'local-chromium', '588429', 'chrome-win32', 'chrome-win32')
+        chmod_dir = os.path.join(os.environ['USERPROFILE'], 'AppData', 'Local', 'pyppeteer', 'pyppeteer', 'local-chromium', '588429', 'chrome-win64', 'chrome-win64')
         if os.path.exists(chrome_exe):
             return
         else:
             print('貌似第一次使用，未找到chrome，正在下载chrome浏览器....')
 
-            chromeurl = 'http://npm.taobao.org/mirrors/chromium-browser-snapshots/Win_x64/588429/chrome-win32.zip'        #定义下载地址
+            chromeurl = 'https://mirrors.huaweicloud.com/chromium-browser-snapshots/Win_x64/884014/chrome-win.zip'        #定义下载地址
             target_file = 'chrome-win.zip'                                                          #定义下载文件名
             await download_file(chromeurl, target_file)           #下载
             with zipfile.ZipFile(target_file, 'r') as zip_ref:
@@ -134,7 +135,7 @@ async def init_chrome():        #判断chrome是否存在，不存在则下载�
         else:
             print('貌似第一次使用，未找到chrome，正在下载chrome浏览器....')
             print('文件位于github，请耐心等待，如遇到网络问题可到项目地址手动下载')
-            download_url = "https://github.com/dsmggm/svjdck/releases/download/jdck/chrome-linux.zip"
+            download_url = "https://mirrors.huaweicloud.com/chromium-browser-snapshots/Linux_x64/884014/chrome-linux.zip"
             if not os.path.exists(download_path):       #如果没有路径就创建路径
                 os.makedirs(download_path, exist_ok=True)  # 创建下载路径
             target_file = os.path.join(download_path, 'chrome-linux.zip')  # 定义下载文件路径跟文件名
