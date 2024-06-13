@@ -55,9 +55,10 @@ https://github.com/517939148yjf/svjdck/releases/download/jdck/chrome-linux.zip
 解压到~/.local/share/pyppeteer/local-chromium/1181205/  
 确保1181205/chrome-linux/chrome有执行权限之后再运行脚本  
 
-win系统chrome浏览器手动下载地址
-下载地址：https://mirrors.huaweicloud.com/chromium-browser-snapshots/Win_x64/884014/chrome-win.zip 然后
-解压到（没有路径就创建路径） C:\Users\<用户名>\AppData\Local\pyppeteer\pyppeteer\local-chromium\588429\chrome-win32
+### win系统chrome浏览器手动下载地址
+下载地址：https://mirrors.huaweicloud.com/chromium-browser-snapshots/Win_x64/884014/chrome-win.zip 
+然后解压到C:\Users\<用户名>\AppData\Local\pyppeteer\pyppeteer\local-chromium\588429\chrome-win32
+没有路径就创建路径，解压文件打开是含有一个chrome-win的文件夹把文件夹里面的东西全部解压到chrome-win32即可
 
 
 # jdck.ini配置文件位于脚本/程序同目录下
@@ -72,13 +73,21 @@ client_secret=*******     #填青龙对接应用的client_secret
 15611167798#123456789#我是备注2  
 
 
-### 废案：
+win系统需要用编辑器把上面的内容添加进去建议用Notepad+++
+大聪明不要用记事本去编辑会有错误的
+
+### 代理登陆变量（需要代理就把这代码添加到配制文件里面）：
 ```
 代理登陆变量  
 AutoJDCK_DP = http://192.168.2.1:22332    #设置登录代理（不建议设置代理，基本上要验证码）  
 ```
+###没测试过的解决验证码方案：
 
-# 打赏  
+给你装了pro短信登录或者兔子等各种短信登录面板的那台服务器搭建个http服务端然后脚本里面代理就填
+服务IP跟代理端口，这个只是理论上解决不跳验证码的方法，没测试过，自行研究。
+
+# 打赏
+
 如果你觉得作者很棒，你可以打赏他  
 如果你觉得他很菜，你可以扫码支持他  
 ![给点钱花花](get_me_some_money.jpg)
