@@ -109,7 +109,7 @@ async def init_chrome():        #判断chrome是否存在，不存在则下载�
     if platform.system() == 'Windows':
         chrome_dir = os.path.join(os.environ['USERPROFILE'], 'AppData', 'Local', 'pyppeteer', 'pyppeteer', 'local-chromium', '588429', 'chrome-win32')
         chrome_exe = os.path.join(chrome_dir, 'chrome.exe')
-        chmod_dir = os.path.join(os.environ['USERPROFILE'], 'AppData', 'Local', 'pyppeteer', 'pyppeteer', 'local-chromium', '588429', 'chrome-win32', 'chrome-win64')
+        chmod_dir = os.path.join(os.environ['USERPROFILE'], 'AppData', 'Local', 'pyppeteer', 'pyppeteer', 'local-chromium', '588429', 'chrome-win32', 'chrome-win32')
         if os.path.exists(chrome_exe):
             return
         else:
