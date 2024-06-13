@@ -55,6 +55,10 @@ https://github.com/517939148yjf/svjdck/releases/download/jdck/chrome-linux.zip
 解压到~/.local/share/pyppeteer/local-chromium/1181205/  
 确保1181205/chrome-linux/chrome有执行权限之后再运行脚本  
 
+###win系统chrome浏览器手动下载地址
+https://mirrors.huaweicloud.com/chromium-browser-snapshots/Win_x64/884014/chrome-win.zip
+解压到C:\Users\<用户名>\AppData\Local\pyppeteer\pyppeteer\local-chromium\588429\chrome-win32
+
 
 # jdck.ini配置文件位于脚本/程序同目录下
 Displaylogin=0  #是否显示登录操作，1显示，0不显示  
